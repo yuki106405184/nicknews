@@ -1,0 +1,816 @@
+<html>
+
+<head>
+    <!--告訴瀏覽器要根據載具的大小來呈現網頁-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        @media all and (min-width: 1024px) {
+            .mobile-only {
+                /* don't display at desktop */
+                display: none;
+            }
+        }
+
+        @media all and (max-width: 1024px) {
+            .desktop-only {
+                /* don't display at mobile */
+                display: none;
+            }
+        }
+
+        .iphone8 {
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        .w-1024 {
+            width: 1024px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .school-p {
+
+            margin-left: auto;
+            margin-right: auto;
+            background: #E2E2E2;
+            height: 700px;
+        }
+
+        .sport-p {
+            margin-left: auto;
+            margin-right: auto;
+            background: #F1F1F1;
+            height: 700px;
+        }
+
+        .video-p {
+            margin-left: auto;
+            margin-right: auto;
+            background: #E2E2E2;
+            height: 700px;
+        }
+
+        .subject-p {
+            margin-left: auto;
+            margin-right: auto;
+            background: #F1F1F1;
+            height: 700px;
+        }
+
+        .topic-scn-p {
+            width: 64px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 33px;
+            /* or 206% */
+            color: #BB6845;
+            text-align: center;
+            margin: auto;
+        }
+
+        .scn-1-p {
+            width: 280px;
+            height: 276px;
+            margin: auto;
+            padding-top: 8.8px;
+        }
+
+        .scn-2-p {
+            width: 280px;
+            height: 276px;
+            margin: auto;
+            margin-top: 20px;
+
+        }
+
+        .title-p {
+            width: 280px;
+            height: 66px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 33px;
+            /* or 150% */
+
+            text-align: center;
+            color: #656565;
+            background-color: #ffffff;
+        }
+
+        .more-scn {
+            width: 100px;
+            height: 40px;
+            background-color: #F2AC3F;
+            margin-left: auto;
+            margin-right: auto;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .more-p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 33px;
+            /* or 275% */
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .more-spn {
+            width: 100px;
+            height: 40px;
+            background-color: #408FC2;
+            margin-left: auto;
+            margin-right: auto;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+
+
+
+
+        /* viewport width >1023px */
+        @media(min-width: 1023px) {
+            .topic-scn {
+                width: 88px;
+                height: 33px;
+                left: 468px;
+                top: 1342px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 33px;
+                text-align: center;
+                /* identical to box height, or 150% */
+                color: #BB6845;
+            }
+
+
+            .topic-spn {
+
+                width: 88px;
+                height: 33px;
+                left: 468px;
+                top: 2354.61px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 33px;
+                text-align: center;
+                /* identical to box height, or 150% */
+                color: #BB6845;
+            }
+
+            .topic-vn {
+
+                width: 88px;
+                height: 33px;
+                left: 468px;
+                top: 3368px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 33px;
+                padding-top: 30px;
+                /* identical to box height, or 150% */
+                color: #BB6845;
+            }
+
+            .topic-tn {
+                width: 88px;
+                height: 33px;
+                left: 468px;
+                top: 4380.62px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 33px;
+                padding-top: 30px;
+                /* identical to box height, or 150% */
+                color: #BB6845;
+
+            }
+        }
+
+        body {
+            background-color: #e5e5e5
+        }
+
+        .behind {
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            height: 100px;
+        }
+
+        .title {
+            width: 330px;
+            height: 80px;
+            left: 135px;
+            top: 1412px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 33px;
+            /* or 150% */
+            text-align: center;
+            color: #656565;
+        }
+
+        /* 校園新聞 */
+        .school {
+            width: 1024px;
+            height: 1013px;
+            left: 0px;
+            top: 1312px;
+            background-color: #E2E2E2;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .scn-1 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 1412px;
+            padding-right: 134.67px
+        }
+
+        .scn-3 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 1867px;
+        }
+
+        .scn-2 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 1412px;
+            padding-right: 134.67px;
+            padding-top: 59px;
+        }
+
+        .scn-4 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 1867px;
+            padding-top: 59px;
+        }
+
+        .article {
+            width: 330px;
+            left: 137px;
+            top: 2000px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 20px;
+            /* or 167% */
+            color: #656565;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+
+        /* 體育新聞 */
+        .sport {
+            width: 1024px;
+            height: 1013px;
+            left: 0px;
+            top: 2325px;
+            background-color: #f1f1f1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .title-1 {
+            width: 330px;
+            height: 80px;
+            left: 135px;
+            top: 1412px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 33px;
+            /* or 150% */
+            text-align: center;
+            color: #656565;
+        }
+
+        .spn-1 {
+            flex-direction: row;
+
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 2425px;
+            padding-right: 134.67px
+        }
+
+        .spn-2 {
+            flex-direction: row;
+
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 2425px;
+
+        }
+
+        .spn-3 {
+            flex-direction: row;
+
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 2880px;
+            padding-top: 59px;
+            text-align: center;
+            padding-right: 134.67px
+        }
+
+        .spn-4 {
+            flex-direction: row;
+
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 2880px;
+            padding-top: 59px;
+
+            text-align: center
+        }
+
+        /* 影音新聞 */
+        .video {
+            width: 1024px;
+            height: 1013px;
+            left: 0px;
+            top: 3338px;
+            background-color: #e2e2e2;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .vn-1 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 3438px;
+            padding-top: 37px;
+            text-align: center;
+            padding-right: 134.67px
+        }
+
+        .vn-2 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 3438px;
+            padding-top: 37px;
+            text-align: center;
+        }
+
+        .vn-3 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 3893px;
+            padding-top: 59px;
+            text-align: center;
+            padding-right: 134.67px
+        }
+
+        .vn-4 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 3893px;
+            padding-top: 59px;
+            text-align: center;
+        }
+
+        /* 專題新聞 */
+        .subject {
+            width: 1024px;
+            height: 1013px;
+            left: 0px;
+            top: 4351px;
+            background-color: #f1f1f1
+        }
+
+        .tn-1 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 4451px;
+            padding-top: 37.89px;
+            text-align: center;
+            padding-right: 134.67px
+        }
+
+        .tn-2 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 4451px;
+            padding-top: 37.89px;
+            text-align: center;
+        }
+
+        .tn-3 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 135px;
+            top: 4906px;
+            padding-top: 59px;
+            text-align: center;
+            padding-right: 134.67px
+        }
+
+        .tn-4 {
+            flex-direction: row;
+            width: 334.33px;
+            height: 416px;
+            left: 555px;
+            top: 4906px;
+            padding-top: 59px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!---手機版-->
+    <div class="iphone8 mobile-only">
+        <div class="school-p">
+            <div class="topic-scn-p">校園新聞</div>
+            <div style="flex-direction: column;vertical-align: middle;">
+                <div class="scn-1-p">
+                    <img src="./image/hk.jpg" width="280px" height="210px">
+                    <div class="title-p">港警攻校情勢升溫<br>
+                        政大生自發靜坐挺香港</div>
+                </div>
+                <div class="scn-2-p">
+                    <img src="./image/scu.jpg" width="280px" height="210px">
+                    <div class="title-p">處理延宕<br>
+                        東吳銅像遷案遭退
+                    </div>
+
+                </div>
+                <div style="vertical-align: middle;">
+                    <div class="more-scn">
+                        <div class="more-p">
+                            更多校園新聞&gt;
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sport-p">
+                <div class="topic-scn-p">體育新聞</div>
+                <div style="flex-direction: column;vertical-align: middle;">
+                    <div class="scn-1-p">
+                        <img src="./image/push.jpg" width="280px" height="210px">
+                        <div class="title-p">攜手合作<br>
+                            景美師大聯隊力拔冠軍</div>
+                    </div>
+                    <div class="scn-2-p">
+                        <img src="./image/football.jpg" width="280px" height="210px">
+                        <div class="title-p">
+                            重振旗鼓<br>
+                            南華巴西軍團展望四強</div>
+                    </div>
+                </div>
+                <div style="vertical-align: middle;">
+                    <div class="more-spn">
+                        <div class="more-p">
+                            更多體育新聞&gt;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-p">
+                <div class="topic-scn-p">影音新聞</div>
+                <div style="flex-direction: column;vertical-align: middle;">
+                    <div class="scn-1-p">
+                        <img src="./image/Nuclear.png" width="280px" height="210px">
+                        <div class="title-p">
+                            告別核電　風光明媚<br>
+                            ｜2019廢核遊行
+                        </div>
+                    </div>
+                    <div class="scn-2-p">
+                        <img src="./image/fashion.jpg" width="280px" height="210px">
+                        <div class="title-p">
+                            遺失的服裝靈魂<br>
+                            台灣打版人才斷層危機
+                        </div>
+                    </div>
+                    <div style="vertical-align: middle;">
+                        <div class="more-scn">
+                            <div class="more-p">
+                                更多影音新聞&gt;</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="subject-p">
+                <div class="topic-scn-p">專題新聞</div>
+                <div style="flex-direction: column;vertical-align: middle;">
+                    <div class="scn-1-p">
+                        <img src="./image/social.jpg" width="280px" height="210px">
+                        <div class="title-p">
+                            墜落的無名英雄：<br>
+                            社工的「證」確解答？
+                        </div>
+                    </div>
+                    <div class="scn-2-p">
+                        <img src="./image/law1.jpg" width="280px" height="210px">
+                        <div class="title-p">
+                            司法天秤無法衡量的傷痛<br>
+                            修復式司法另闢正義之路
+                        </div>
+                    </div>
+                    <div style="vertical-align: middle;">
+                        <div class="more-spn">
+                            <div class="more-p">
+                                更多專題新聞&gt;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---電腦版-->
+    <div class="w-1024 desktop-only">
+
+        <!---校園新聞-->
+        <div class="school">
+            <div class="topic-scn" style="display: flex; margin-left: auto; margin-right: auto;">校園新聞
+            </div>
+
+
+            <div style="display: flex; justify-content: center;">
+                <div class="scn-2">
+                    <div class="title">世新學生會爆財務不透明<br>
+                        聲明引假法條惹議</div>
+                    <img src="./image/shu.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        世新大學學生在社群網站匿名發文，質疑世新學生自治會在遞交給世新學生議會審查的活動預算案中，頁末標明「未經由學生會同意，請勿傳載此檔案」之舉……
+                    </div>
+
+
+                </div>
+                <div class="scn-4">
+                    <div class="title">青年夜洗人行道<br>
+                        倡「礦業改革」訴求</div>
+                    <img src="./image/wish.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        有一群關注《礦業法》修法議題的大學生，發起夜洗人行道及圍牆的行動。他們以強力水柱清洗街道，洗下「礦業改革」字樣，表達希望盡速修《礦業法》，避免台灣有限自然資源遭持續開挖消耗殆盡等訴求。
+                    </div>
+
+
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <div class="scn-1">
+                    <div class="title">港警攻校情勢升溫<br>
+                        政大生自發靜坐挺香港</div>
+                    <img src="./image/hk.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        自11日起，香港警察為逮捕「大三罷」示威者，進入多所香港大學校園。據《轉角國際》12日報導，港警以橡膠子彈攻擊學生頭部、針對香港城市大學宿舍無差別投放催淚彈等一連串攻擊行為，引起各界關注。國立政治大學學生自發呼籲師生於14日在政大綜合院館連儂牆前參與靜坐活動……。
+
+
+                    </div>
+
+                </div>
+                <div class="scn-3">
+                    <div class="title">處理延宕<br>
+                        東吳銅像遷案遭退</div>
+                    <img src="./image/scu.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        東吳銅委會於108學年度第一次校務會議中，提出將銅像遷移至校內其他地點，或贈予校外適當機構兩方案，然校方以無共識為由，全案退回銅委會再討論。東吳學生會對此深表遺憾，並於當晚發表聲明指稱，校方蓄意拖延銅像處理進度。
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---體育新聞-->
+        <div class="sport">
+            <div class="topic-spn" style="display: flex; margin-left: auto; margin-right: auto;">體育新聞
+            </div>
+            <div style="display: flex; justify-content: center;">
+
+                <div class="spn-1">
+                    <div class="title-1">
+                        重振旗鼓<br>
+                        南華巴西軍團展望四強</div>
+                    <img src="./image/football.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        雙方選手起跳頂球，選手在中場交戰，不讓彼此突破最後防線，教練聲嘶力竭地吶喊著，「Força！Força！（加油！加油！）」。108學年度大專校院足球聯賽於20日在吳鳳科技大學上演預賽最終戰……
+
+                    </div>
+                </div>
+
+                <div class="spn-2">
+                    <div class="title-1">
+                        「划」敵為友<br>林家兄弟輕艇齊心奪魁</div>
+                    <img src="./image/boat.jpg" width="333.333px" height="250px">
+                    <div class="article">2020
+                        年亞洲輕艇競速錦標賽暨奧運資格賽國家代表隊選拔賽於2日在新北市微風運河舉行，愛斯基摩艇（註1）1000公尺雙人組兄弟檔，台北市立大學的林雍博與哥哥林雍傑在四組參賽選手中脫穎而出，拿下冠軍並順利取得亞錦賽國家隊代表權。
+
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <div class="spn-3">
+                    <div class="title">
+                        攜手合作<br>
+                        景美師大聯隊力拔冠軍</div>
+                    <img src="./image/push.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        2019年國際拔河邀請賽10月27、28日於花蓮縣立體育館舉行。地主中華台北女子代表隊拿下勝利，而大專男子組600公斤級由台北市立大學奪冠，成功完成五連霸壯舉。
+
+                    </div>
+
+                </div>
+
+                <div class="spn-4">
+                    <div class="title">
+                        擊劍攻防戰<br>陳致傑飛身刺擊搶下關鍵分</div>
+                    <img src="./image/sport.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        2019台北公開賽暨第24屆聯新盃全國擊劍錦標賽在台北體育館盛大登場，16日進行男子鈍劍組賽程。選手在冠亞賽展開激戰，最終國立臺灣體育運動大學的陳致傑以一記飛身刺擊，搶下最後關鍵一分，奪得冠軍。
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!---影音新聞-->
+        <div class="video">
+            <div class="topic-vn" style="display: flex; margin-left: auto; margin-right: auto;">影音新聞
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <div class="vn-1">
+                    <div class="title-1">遺失的服裝靈魂<br>
+                        台灣打版人才斷層危機</div>
+                    <img src="./image/fashion.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        伸展台上，華麗衣服在鎂光燈之間穿梭。台灣時裝產業裡，設計師是眾所矚目的焦點，也是服裝科系學生的夢幻職業，但你知道嗎？在他們競相追逐的過程中，台灣時裝產業的地基，卻也在一點一點地被掏空。
+
+                    </div>
+                </div>
+
+                <div class="vn-2">
+                    <div class="title">告別核電　風光明媚<br>
+                        ｜2019廢核遊行</div>
+                    <img src="./image/Nuclear.png" width="333.333px" height="250px">
+                    <div class="article">台灣廢核遊行27號在總統府前登場，今年以「告別核電
+                        風光明媚」為主題，要求廢除核電，發展再生能源。民進黨的蔡英文與前行政院長賴清德也都現身力挺，加上147個民間團體，主辦單位號稱有過萬人參加。不過另一邊廂，擁核團體今天也在各大車站號召重啟核四的聯署。
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <div class="vn-3">
+                    <div class="title">藝術工作不穩定<br>
+                        學生接案困難重重</div>
+                    <img src="./image/Art.png" width="333.333px" height="250px">
+                    <div class="article">
+                        在國立政治大學，有一名學生把腦海中的創意繪製成大型壁畫，偶爾也會在外頭接案創作的她，講述了年輕藝術工作者所遭遇的困難。我們常聽到畫畫不能當飯吃，但你真的對創作產業有正確的認知嗎？
+
+                    </div>
+
+                </div>
+                <div class="vn-4">
+                    <div class="title">點亮百年老厝的勇者藝術家<br>
+                        －陳杰蔚</div>
+                    <img src="./image/Chen.png" width="333.333px" height="250px">
+                    <div class="article">大學主修大氣科學的陳杰蔚，為了轉換人生跑道，離開求學和工作十多年的台北，回到自己的家鄉 -
+                        蘆竹湳，一座歷史悠久的的閩南聚落。陳杰蔚在返鄉之後，成立工作室Start works「始作自造所」，以科技替老厝注入新的活力。
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!---專題新聞-->
+        <div class="subject">
+            <div class="topic-tn" style="display: flex; margin-left: auto; margin-right: auto;">
+                專題新聞</div>
+            <div style="display: flex; justify-content: center;">
+                <div class="tn-1">
+                    <div class="title">
+                        台灣籃壇注入新勢力？<br>
+                        UBA黑軍團的進擊</div>
+                    <img src="./image/uba.jpg" width="333.333px" height="250px">
+                    <div class="article">「阿巴西雙手爆扣，展現驚人彈跳能力，全場球迷陷入瘋狂！」108學年度大專校院籃球運動聯賽（University
+                        Basketball
+                        Association, UBA）八強賽，世新大學來自塞內加爾的阿巴西（Mohammad al Bachir
+                        gadiaga）發揮身材優勢，為賽事掀起高潮。
+                    </div>
+                </div>
+                <div class="tn-2">
+                    <div class="title">墜落的無名英雄：<br>
+                        社工的「證」確解答？</div>
+                    <img src="./image/social.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        社會工作者是社會安全防護網的防線之一，往往因工作性質及刻板印象，間接影響社會大眾對於社工專業的重視程度。證照制度也因此產生，期待能藉此提升大眾對社工專業的認同，卻引起社福界對該制的異見。
+                    </div>
+
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <div class="tn-3">
+                    <div class="title">司法天秤無法衡量的傷痛<br>
+                        修復式司法另闢正義之路</div>
+                    <img src="./image/law1.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        「那我兒子有活下去的權利嗎？」宋喬安眼眶中隱忍的那一滴淚，最終流了下來。自社會寫實電視劇《我們與惡的距離》播出後，引發熱烈迴響及省思。劇中因一起隨機殺人事件，使得加害人與被害人雙方家屬陷入痛苦的深淵中。
+
+                    </div>
+                </div>
+                <div class="tn-4">
+                    <div class="title">出版寒冬中的一道曙光？<br>電子書帶起閱讀新契機</div>
+                    <img src="./image/book.jpg" width="333.333px" height="250px">
+                    <div class="article">
+                        實體出版業營業額急遽下跌、新書出版量創歷史新低，書店等實體書通路紛紛閉店或轉型……「因應網路時代，出版界必須找到新的方向。」春山出版總編輯莊瑞琳說。數位時代的來臨，使出版社開始思考跨足數位出版領域。
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
